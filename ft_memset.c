@@ -6,11 +6,11 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 12:11:08 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/22 12:58:33 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/10/22 21:16:41 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
-
+// lembrar de tirar o importe ira acausar erro de duplo importe
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	const_byte;	
