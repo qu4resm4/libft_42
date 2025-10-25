@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 14:10:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/24 18:40:53 by gquaresm         ###   ########.rio      */
+/*   Created: 2025/10/23 16:36:11 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/10/24 14:02:02 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-#ifndef LIBFT_H
-# define LIBFT_H
-/*includes for stdlib because have size_t and malloc*/
-# include <stdlib.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	count;
 
-int		ft_isalpha(int c);
+	count = 0;
+	while (s[count])
+		count++;
+	return (count);
+}
 
-int		ft_isdigit(int c);
+/*
+#include <stdio.h>
 
-int		ft_isalnum(int c);
-
-int		ft_isascii(int c);
-
-int		ft_isprint(int c);
-
-size_t	ft_strlen(const char *s);
-
-void	*ft_memset(void *s, int c, size_t n);
-
-void	ft_bzero(size_t n, void *s);
-
-#endif
+int	main(void)
+{
+	char *teste = "jovem";
+	printf("%li", strlen(teste));	
+}
+*/

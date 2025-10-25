@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 14:10:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/24 18:40:53 by gquaresm         ###   ########.rio      */
+/*   Created: 2025/10/24 13:54:28 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/10/24 13:59:04 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-/*includes for stdlib because have size_t and malloc*/
-# include <stdlib.h>
-
-int		ft_isalpha(int c);
-
-int		ft_isdigit(int c);
-
-int		ft_isalnum(int c);
-
-int		ft_isascii(int c);
-
-int		ft_isprint(int c);
-
-size_t	ft_strlen(const char *s);
-
-void	*ft_memset(void *s, int c, size_t n);
-
-void	ft_bzero(size_t n, void *s);
-
-#endif
+void	ft_bzero(size_t n, void *s)
+{
+	
+}

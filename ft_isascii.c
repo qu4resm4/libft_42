@@ -6,11 +6,11 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:21:28 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/23 11:24:45 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/10/24 14:04:45 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
 	unsigned char	ascii_char;
 
