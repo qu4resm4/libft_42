@@ -1,44 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 13:54:28 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/25 19:10:12 by gquaresm         ###   ########.rio      */
+/*   Created: 2025/10/26 07:42:23 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/10/26 08:01:40 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
 
-void	ft_bzero(size_t n, void *s)
-{
-	char	*pointer;
-	int		index;
+// se não tiver o qe fazer retoran
 
-	pointer = (char *) s;
-	index = 0;
-	while (index < n)
-	{
-		pointer[index] = '\0';
-		index++;
-	}
-}
+// se tiver sobreposto (comparar enderecco dos ponteiros) icopia de tras pra frente, evitando a sobreposição
 
-/*teste
-#include <stdio.h>
-int	main(void)
-{
-	char	str[10] = "jovem12345";
-	int	count = 0;	
+// se tiver normal faz normal ?
 
-	printf("%s\n", str);
-	ft_bzero(4, str);
-	
-	while (count < 9)
-	{
-		printf("%c", str[count]);
-		count++;
-	}
-}
-*/
+// pq teria as duas formas se a de tras pra frente faz o mesmo?
+

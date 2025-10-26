@@ -1,44 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 13:54:28 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/25 19:10:12 by gquaresm         ###   ########.rio      */
+/*   Created: 2025/10/25 19:13:41 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/10/25 19:13:44 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
 
-void	ft_bzero(size_t n, void *s)
-{
-	char	*pointer;
-	int		index;
 
-	pointer = (char *) s;
-	index = 0;
-	while (index < n)
-	{
-		pointer[index] = '\0';
-		index++;
-	}
-}
-
-/*teste
-#include <stdio.h>
-int	main(void)
-{
-	char	str[10] = "jovem12345";
-	int	count = 0;	
-
-	printf("%s\n", str);
-	ft_bzero(4, str);
-	
-	while (count < 9)
-	{
-		printf("%c", str[count]);
-		count++;
-	}
-}
-*/
