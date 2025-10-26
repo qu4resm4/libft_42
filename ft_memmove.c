@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 07:42:23 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/26 08:01:40 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/10/26 18:32:33 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,4 @@
 // se tiver normal faz normal ?
 
 // pq teria as duas formas se a de tras pra frente faz o mesmo?
-
+i
