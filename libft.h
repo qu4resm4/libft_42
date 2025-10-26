@@ -6,13 +6,13 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:10:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/24 18:40:53 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/10/26 18:20:30 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-/*includes for stdlib because have size_t and malloc*/
+
 # include <stdlib.h>
 
 int		ft_isalpha(int c);
@@ -30,5 +30,7 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 
 void	ft_bzero(size_t n, void *s);
+
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif
