@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:10:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/26 18:20:30 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:55:29 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,10 @@ size_t	ft_strlen(const char *s);
 
 void	*ft_memset(void *s, int c, size_t n);
 
-void	ft_bzero(size_t n, void *s);
+void	ft_bzero(void *s, size_t n);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif

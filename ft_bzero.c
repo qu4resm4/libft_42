@@ -6,15 +6,15 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 13:54:28 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/25 19:10:12 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/10/28 16:51:28 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
+#include "libft.h"
 
-void	ft_bzero(size_t n, void *s)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*pointer;
-	int		index;
+	size_t	index;
 
 	pointer = (char *) s;
 	index = 0;
