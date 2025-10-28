@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:11:16 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/27 14:55:08 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/10/28 20:38:03 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,27 +14,19 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	int	len_src;
-	int	len_dst;
-	int	index;
+	size_t	index;
 
 	len_src = 0;
 	while (src[len_src])
 		len_src++;
-	len_dst = 0;
-	while (dst[len_dst])
-		len_dst++;
-	if (*dst == '\0' || size == 0)
-	{
-		*dst = '\0';
-		return (len_src + len_dst);
-	}
 	index = 0;
 	while (index < size)
 	{
-		dst[len_dst + index] = src[index];
+		dst[index] = src[index];
 		index++;
 	}
-	return (len_src + len_dst);
+	if (len_src < index)
+	return (len_src);
 }
 
 /**/
