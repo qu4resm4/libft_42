@@ -12,7 +12,10 @@ SRCS = ./ft_bzero.c \
 	./ft_isascii.c \
 	./ft_isprint.c \
 	./ft_memmove.c \
-	./ft_strlen.c
+	./ft_strlen.c \
+	./ft_strlcat.c \
+	./ft_strlcpy.c
+
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

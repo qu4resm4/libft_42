@@ -6,30 +6,42 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:11:16 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/28 20:38:03 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/11/02 19:11:41 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	len_src;
+	size_t	len_src;
+	size_t	len_dst;
 	size_t	index;
 
-	len_src = 0;
-	while (src[len_src])
-		len_src++;
 	index = 0;
-	while (index < size)
-	{
-		dst[index] = src[index];
-		index++;
-	}
-	if (len_src < index)
+        len_src = ft_strlen(src);
+	len_dst = ft_strlen(dst);
+	if (size == 0)
+		return (len_src);
+	if (len_dst < (size - 1))
+		size = len_dst - 1;
+	ft_memcpy(dst, src, size);
 	return (len_src);
 }
 
-/**/
+/*
+#include <stdio.h>
+#include <bsd/string.h>
+
+int main(void)
+{
+	char src[] = "coucou";
+	char dest[10]; memset(dest, 'A', 10);
+	ft_strlcpy(dest, src, -1);
+	printf("%s", dest);
+}
+*/
+
+/*
 #include <stdio.h>
 #include <bsd/string.h>
 int	main(void)
@@ -45,4 +57,4 @@ int	main(void)
 	printf("%s\n", original_dst);
 	printf("%s\n", my_dst);
 }
-
+*/
