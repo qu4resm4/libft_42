@@ -6,12 +6,10 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:49:56 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/22 21:55:28 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/02 07:03:37 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

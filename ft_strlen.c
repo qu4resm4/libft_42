@@ -6,10 +6,10 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:36:11 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/24 14:02:02 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/02 06:59:22 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
