@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 15:02:20 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/04 17:48:10 by gquaresm         ###   ########.fr       */
+/*   Created: 2025/11/04 17:44:32 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/11/04 18:18:27 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*s)
+	const char	*p_char;
+	int			idx;
+
+	p_char = NULL;
+	idx = 0;
+	while (s[idx])
 	{
-		if (*s == (unsigned char) c)
-			return ((char *) s);
-		s++;
+		if (s[idx] == (unsigned char) c)
+			p_char = s + idx;
+		idx++;
 	}
-	if (*s == (unsigned char) c)
-		return ((char *) s);
-	return (NULL);
+	if ((unsigned char) c == '\0')
+		p_char = (char *) s + idx;
+	return ((char *) p_char);
 }
