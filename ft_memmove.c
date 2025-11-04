@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 07:42:23 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/02 16:28:00 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/11/03 08:39:39 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*c_dest;
-	const unsigned char	*c_src;
+	unsigned char	*c_src;
 
 	c_dest = (unsigned char *) dest;
 	c_src = (unsigned char *) src;

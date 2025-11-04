@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 19:44:21 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/04 14:56:08 by gquaresm         ###   ########.rio      */
+/*   Created: 2025/11/04 13:28:52 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/11/04 14:48:18 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_toupper(int c)
 {
-	size_t	index;
-	size_t	len_src;
-	size_t	len_dst;
-	size_t	sum;
-
-	index = 0;
-	sum = 0;
-	len_src = ft_strlen(src);
-	len_dst = ft_strlen(dst);
-	if (size > len_dst)
-		sum = len_src + len_dst;
-	else
-		return (len_src + size);
-	while (src[index] && (len_dst + 1) < size)
-		dst[len_dst++] = src[index++];
-	dst[len_dst] = '\0';
-	return (sum);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	printf("%c", ft_toupper('@'));
+}
+*/
