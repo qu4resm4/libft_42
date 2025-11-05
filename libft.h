@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:10:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/04 20:57:09 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/11/05 13:48:36 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
