@@ -6,84 +6,98 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:21:13 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/10 22:03:36 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/11 17:27:25 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-
-static char	*ft_itoa_to_int_min(void)
+#include <stdio.h>
+/*
+static int	ft_count_places(int n)
 {
-	char	*int_min;
+	int places;
 
-	int_min = (char *) malloc(sizeof(char) * 12);
-	int_min[0] = '-';
-	int_min[1] = '2';
-	int_min[2] = '1';
-	int_min[3] = '4';
-	int_min[4] = '7';
-	int_min[5] = '4';
-	int_min[6] = '8';
-	int_min[7] = '3';
-	int_min[8] = '6';
-	int_min[9] = '4';
-	int_min[10] = '8';
-	int_min[11] = '\0';
-	return (int_min);
-}
-
-char	*ft_alloc_and_fill(short decimal_places, int integer, int signal)
-{
-	char	*num;
-
-	num = (char *) malloc(sizeof(char) * (decimal_places + 1));
-	num[decimal_places] = '\0';
-	if (signal == -1)
-	{
-		num[0] = '-';
-	}
-	while (integer / 10 != 0)
-	{
-		num[decimal_places - 1] = '0' + (integer % 10);
-		integer = integer / 10;
-		decimal_places--;
-	}
-	return (num);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*num;
-	int		signal;
-	long		integer;
-	short	decimal_places;
-
-	signal = 1;
-	integer = n;
-	decimal_places = 0;
+	places = 0;
 	if (n < 0)
 	{
-		signal = -1;
-		integer = -n;
-		decimal_places++;
+		n = -n;
+		places++;
 	}
-	while (integer / 10 != 0)
+	while (n > 9)
 	{
-		integer = integer / 10;
-		decimal_places++;
+		n /= 10;
+		places++;
 	}
-	decimal_places++;
-	integer = n * signal;
-	num = ft_alloc_and_fill(decimal_places, integer, signal);
-	return (num);
+	return (places);
 }
 
-#include <stdio.h>
-int	main(void)
+char	*dft_itoa(int n)
 {
-	printf("%s\n", ft_itoa(-20));
-	printf("%s\n", ft_itoa(90));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-180));
+	char	*str_num;
+	long	num;
+	int	places;
+
+	places = ft_count_places(n);
+	//if (n < 0)
+	//{
+//
+//	}
+}
+*/
+static int      ft_count_places(int n)
+{
+        int places;
+
+        places = 0;
+        if (n < 0)
+        {
+                n = -n;
+                places++;
+        }
+        while (n > 9)
+        {
+                n /= 10;
+                places++;
+        }
+        return (places);
 }
 
+char    *ft_itoa(int n)
+{
+        char    *str_num;
+        long    num;
+        int     places;
+
+        places = ft_count_places(n);
+        str_num = (char *) malloc(sizeof(char) * (places + 1));
+        str_num[places] = '\0';
+        num = n;
+        if (n < 0)
+        {
+                str_num[0] = '-';
+                num = -num;
+        }
+        while (places > 0)
+        {
+                str_num[places - 1] = '0' + (num % 10);
+                num = num / 10;
+                places--;
+        }
+        str_num[places - 1] = '0' + (num % 10);
+        if (n < 0)
+                str_num[0] = '-';
+        return (str_num);
+}
+
+// usar long para evitar int overflow
+// verificar se é negativo e preencher index 0 com 
+// 
+/*
+int     main(void)
+{
+        printf("%s\n", ft_itoa(2147483647));
+        printf("%s\n", ft_itoa(-2147483648));
+        printf("%s\n", ft_itoa(0));
+        printf("%s\n", ft_itoa(-180));
+}
+*/
