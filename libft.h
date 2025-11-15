@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:10:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/11 18:21:35 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/11/14 16:07:28 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	*ft_strdup(const char *s);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-char    *ft_itoa(int n);
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_itoa(int n);
 
 #endif
