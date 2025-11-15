@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 18:19:20 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/15 17:43:52 by gquaresm         ###   ########.fr       */
+/*   Created: 2025/11/15 16:10:25 by gquaresm          #+#    #+#             */
+/*   Updated: 2025/11/15 17:31:28 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	idx;
+	char	*str;
+	size_t	len;
+	size_t	count_end;
 
-	idx = 0;
-	if (n == 0)
-		return (0);
-	while (s1[idx] && s2[idx] && idx < (n - 1))
+	if (!s1 || !set)
+		return (NULL);
+	while (ft_strchr(set, *s1))
 	{
-		if (s1[idx] != s2[idx])
-			return (s1[idx] - s2[idx]);
-		idx++;
+		if (!*s1)
+			break ;
+		s1++;
 	}
-	return ((unsigned char) s1[idx] - (unsigned char) s2[idx]);
+	len = ft_strlen(s1);
+	count_end = 0;
+	if (len == 0)
+		return (ft_strdup(""));
+	while (ft_strchr(set, *(s1 + len - 1)))
+	{
+		count_end++;
+		len--;
+	}
+	str = ft_substr(s1, 0, len);
+	if (!str)
+		return (NULL);
+	return (str);
 }
