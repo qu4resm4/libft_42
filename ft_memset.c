@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 12:11:08 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/02 07:01:40 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/15 23:04:20 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,20 +27,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main () 
-{
-   char str[50];
-
-   strcpy(str, "Welcome to Tutorialspoint");
-   puts(str);
-
-   memset(str, '#', 7);
-   puts(str);
-   
-   return(0);
-}
-*/

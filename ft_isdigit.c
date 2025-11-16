@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 21:25:29 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/10/22 21:47:40 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/15 23:02:29 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-int     main()
-{
-		printf("%i", ft_isdigit('a'));
-		printf("%i", ft_isdigit('='));
-		printf("%i", ft_isdigit('0'));
-		printf("%i", ft_isdigit('7'));
-		printf("%i", ft_isdigit('Z'));
-}
-*/

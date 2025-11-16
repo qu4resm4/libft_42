@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 13:28:52 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/04 14:48:18 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/15 22:56:49 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("%c", ft_toupper('@'));
-}
-*/
