@@ -6,12 +6,12 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 22:43:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/16 17:46:48 by gquaresm         ###   ########.rio      */
+/*   Updated: 2025/11/16 19:27:45 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static void	ft_count_words(char const *s, char c, unsigned int *count)
+static void	ft_count_words(char const *s, char c, int *count)
 {
 	short	last_is_c;
 
@@ -30,12 +30,22 @@ static void	ft_count_words(char const *s, char c, unsigned int *count)
 	}
 }
 
-static char	*ft_alloc_and_cpy_str(char const *s, char c, unsigned int index)
+static unsigned int	ft_substr_len(int i_word, int i, char const *s, char c)
 {
-	char	*str;
 	unsigned int	count_letters;
-	unsigned int	index_word;
-	short	last_is_c;
+
+	count_letters = 0;
+	while (i_word == i && s[count_letters] != c && s[count_letters])
+		count_letters++;
+	return (count_letters);
+}
+
+static char	*ft_alloc_and_cpy_str(char const *s, char c, int index)
+{
+	char			*str;
+	short			last_is_c;
+	int	count_letters;
+	int	index_word;
 
 	last_is_c = 1;
 	count_letters = 0;
@@ -46,9 +56,7 @@ static char	*ft_alloc_and_cpy_str(char const *s, char c, unsigned int index)
 		{
 			index_word++;
 			last_is_c = 0;
-			while (index_word == index
-				&& s[count_letters] != c && s[count_letters])
-				count_letters++;
+			count_letters = ft_substr_len(index_word, index, s, c);
 		}
 		if (*s == c)
 			last_is_c = 1;
@@ -60,7 +68,7 @@ static char	*ft_alloc_and_cpy_str(char const *s, char c, unsigned int index)
 	ft_strlcpy(str, s - 1, count_letters + 1);
 	return (str);
 }
-// 24 linhas
+// 27 linhas
 
 static void	ft_free_str_arr(char	**str_arr)
 {
@@ -75,7 +83,7 @@ static void	ft_free_str_arr(char	**str_arr)
 char	**ft_split(char const *s, char c)
 {
 	char			**str_arr;
-	unsigned int	count;
+	int	count;
 
 	ft_count_words(s, c, &count);
 	str_arr = (char **) malloc(sizeof(char *) * (count + 1));
