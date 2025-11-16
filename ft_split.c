@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 22:43:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/16 19:27:45 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/11/16 19:31:11 by gquaresm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -30,9 +30,9 @@ static void	ft_count_words(char const *s, char c, int *count)
 	}
 }
 
-static unsigned int	ft_substr_len(int i_word, int i, char const *s, char c)
+static int	ft_substr_len(int i_word, int i, char const *s, char c)
 {
-	unsigned int	count_letters;
+	int	count_letters;
 
 	count_letters = 0;
 	while (i_word == i && s[count_letters] != c && s[count_letters])
@@ -68,7 +68,6 @@ static char	*ft_alloc_and_cpy_str(char const *s, char c, int index)
 	ft_strlcpy(str, s - 1, count_letters + 1);
 	return (str);
 }
-// 27 linhas
 
 static void	ft_free_str_arr(char	**str_arr)
 {
