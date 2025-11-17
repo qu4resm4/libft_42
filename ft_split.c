@@ -6,7 +6,7 @@
 /*   By: gquaresm <gquaresm@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 22:43:37 by gquaresm          #+#    #+#             */
-/*   Updated: 2025/11/16 19:31:11 by gquaresm         ###   ########.fr       */
+/*   Updated: 2025/11/16 21:03:17 by gquaresm         ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -42,10 +42,10 @@ static int	ft_substr_len(int i_word, int i, char const *s, char c)
 
 static char	*ft_alloc_and_cpy_str(char const *s, char c, int index)
 {
-	char			*str;
-	short			last_is_c;
-	int	count_letters;
-	int	index_word;
+	char	*str;
+	short	last_is_c;
+	int		count_letters;
+	int		index_word;
 
 	last_is_c = 1;
 	count_letters = 0;
@@ -81,8 +81,8 @@ static void	ft_free_str_arr(char	**str_arr)
 
 char	**ft_split(char const *s, char c)
 {
-	char			**str_arr;
-	int	count;
+	char	**str_arr;
+	int		count;
 
 	ft_count_words(s, c, &count);
 	str_arr = (char **) malloc(sizeof(char *) * (count + 1));
