@@ -40,19 +40,30 @@ SRCS =	ft_isalpha.c \
 
 OBJS = $(SRCS:.c=.o)
 
+BONUS = ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstadd_back_bonus.c
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $(OBJS)
 
+bonus: $(BONUS_OBJS) $(NAME)
+	$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJS)
+
 .o: .c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean:
-	rm -f $(NAME) $(OBJS)
+	rm -f $(NAME) $(OBJS) $(BONUS_OBJS)
 
 re: fclean all
 
