@@ -13,13 +13,13 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	// está errado pra caramba
 	if (!lst || !new)
 		return ;
-	while ((*lst)->next)
+	while (1)
 	{
-		lst = &(*lst)->next;
 		if (!((*lst)->next))
-			(*lst)->next = new;
+			break ;
+		lst = &((*lst)->next);
 	}
+	(*lst)->next = new;
 }

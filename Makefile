@@ -2,6 +2,7 @@ CC = cc
 AR = ar
 ARFLAGS = rcs
 CFLAGS = -Wall -Werror -Wextra
+CFLAGS_DEBUG = -Wall -Werror -Wextra -g
 NAME = libft.a
 SRCS =	ft_isalpha.c \
 	ft_isdigit.c \
@@ -55,6 +56,9 @@ $(NAME): $(OBJS)
 
 bonus: $(BONUS_OBJS) $(NAME)
 	$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJS)
+
+debug: clean
+	$(MAKE) CFLAGS="$(CFLAGS_DEBUG)" $(NAME)
 
 .o: .c
 	$(CC) $(CFLAGS) -c $< -o $@
