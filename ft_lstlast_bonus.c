@@ -13,14 +13,13 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	// tem algo de errado auqi
 	if (!lst)
 		return (NULL);
-	while (lst->next)
+	while (1)
 	{
-		lst = lst->next;
 		if (!(lst->next))
 			return (lst);
+		lst = lst->next;
 	}
 	return (lst);
 }
