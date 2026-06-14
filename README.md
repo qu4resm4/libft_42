@@ -1,4 +1,4 @@
-*This project was developed as part of the 42 School curriculum by gquaresm.*
+_This project has been created as part of the 42 curriculum by gquaresm._
 
 # Libft
 
